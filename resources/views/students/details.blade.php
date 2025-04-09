@@ -13,7 +13,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($students as $student)
+
                     <tr>
                         <td>{{$student->students_name}}</td>
                         <td>{{$student->DOB}}</td>
@@ -21,7 +21,7 @@
                         <td>{{$student->course}}</td>
                     </tr>
 
-                    @endforeach
+
                 </tbody>
             </table>
         </div>

@@ -14,7 +14,7 @@
                         <tr>
 
                             <td>{{$student->students_name}}</td>
-<td><a href="{{route("details")}}">details</a></td>
+<td><a href="{{route("details",$student->id)}}">details</a></td>
 
                         </tr>
                         @endforeach

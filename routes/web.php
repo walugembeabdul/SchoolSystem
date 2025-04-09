@@ -25,4 +25,4 @@ Route::post("login",[AuthManager::class,"loginpost"])->name("loginpost");
 Route::get("add_students",[StudentsManager::class,"add_students"])->name("add_students");
 Route::post("post_students",[StudentsManager::class,"post_students"])->name("post_students");
 Route::get("view",[StudentsManager::class,"view"])->name("view");
-Route::get("details",[StudentsManager::class,"details"])->name("details");
+Route::get("details/{id}",[StudentsManager::class,"details"])->name("details");

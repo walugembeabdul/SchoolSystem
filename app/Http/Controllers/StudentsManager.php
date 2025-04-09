@@ -30,9 +30,9 @@ class StudentsManager extends Controller
         $students= Students::all();
         return view("students.view",compact("students"));
     }
-    public function details(){
-        $students= Students::all();
-        return view("students.details",compact("students"));
+    public function details($id){
+        $student= Students::find($id);
+        return view("students.details",compact("student"));
 
     }
 }

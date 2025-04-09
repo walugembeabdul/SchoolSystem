@@ -15,7 +15,7 @@ class AuthManager extends Controller
     public function loginpost(Request $request){
         $request->validate([
             "email"=>"required",
-            "password"=>"required|Min:4|string|regex:/[a-z]/|regex:/[A-Z]/|regex:/[0-1]/|regex:/[@#$!%^&*?]/",
+            "password"=>"required",
 
         ]);
         $credintials=$request->only("email","password");
@@ -30,7 +30,7 @@ class AuthManager extends Controller
         $request->validate([
             "name"=>"required",
             "email"=>"required",
-            "password"=>"required|Min:4|string|regex:/[a-z]/|regex:/[A-Z]/|regex:/[0-1]/|regex:/[@#$!%^&*?]/",
+            "password"=>"required",
         ]);
         $harspwd=Hash::make($request->password);
         $user=new User();
